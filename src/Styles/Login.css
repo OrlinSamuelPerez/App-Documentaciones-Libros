@@ -1,0 +1,75 @@
+h1{
+    text-align: left;
+    margin-top: 50px;
+    margin-left:10px;
+    margin-right: 10px;
+}
+form{
+    width: 90%;
+    margin-left:10px;
+}
+input{
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    border-bottom-color: white;
+    color: white;
+    margin-bottom: 20px;
+}
+
+a{
+    text-align: center;
+    font-size: 19px;
+    padding-top: 45px;
+    cursor: pointer;
+}
+res{
+    width: 50%;
+    border-color: blue;
+}
+.button-sencondary{
+    width: 45%;
+    background-color: transparent;
+    color: white;
+    margin-left: 17px;
+    padding: 10px;
+}
+.button-senco{
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 50%;
+    width: 55px;
+    padding-top: 4px;
+    border:none;
+    height: 55px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding-right: 10px;
+
+}
+.button-senco img{
+    width: 45px;
+    height: 45px;
+
+}
+.text-res{
+    margin-top: 15px;
+    text-align: center;
+}
+@media (min-width:500px){
+    h1{
+        text-align: center;
+
+    }
+    form{
+        width:80%;
+    }
+}@media (min-width:720px){
+    form{
+        width:50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
