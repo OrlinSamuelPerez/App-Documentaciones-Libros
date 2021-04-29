@@ -1,6 +1,8 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react';
 import {db} from './Firebase/BD';
-
+import Card from './Components/Card';
+import Libro from './Img/libro.svg';
+import Code from './Img/code.png'
 export default function Home(){
     const [data, setData] = useState([]);
     const [dataCoder, setDataCoder] = useState([]);
@@ -25,12 +27,7 @@ export default function Home(){
     }, []);
     const book = (
         data.map(doc =>
-            <div className="Card-library">
-                <h2>{doc.title}</h2>
-                <p>Author {doc.author}</p>
-                <a href="gs://app-documentaciones.appspot.com/Libros/Python" download>Descargar gratis</a>
-                <a href={doc.url} target="_blank" >Ver completo</a>
-            </div>    
+                 <Card title={doc.title} author={doc.author} url={doc.url} description={doc.note} />
            )
     )
     const code = (
@@ -45,18 +42,19 @@ export default function Home(){
        <main>
            <div className="main-form">
                <form > 
-                   <input placeholder="Buscar un libro"/>
+                   <input placeholder="Buscar aqui..."/>
                </form>
                <div className="buttons-grup">
-                    <button onClick={()=>setBody(book)}>Ver Libros</button>
-                    <button onClick={()=>setBody(code)}>Ver Codigos</button>
+                    <button onClick={()=>setBody(book)}>Ver Libros <img src={Libro}/></button>
+                    <button onClick={()=>setBody(code)}>Ver Codigos <img src={Code}/></button>
                 </div>
            </div>       
    
-
             {/* Change */}
            
-            {body}
+           <div className="main-body">
+             {body}
+           </div>
        </main>
     )
 }

@@ -5,6 +5,7 @@ export default function WriteCode() {
         titleCode:'',
         noteCode:'',
         idUser:'',
+        lenguaje:''
     };
     const [values, setValues] = useState(valueInitial);
     const handleChange = (e)=>{
@@ -26,11 +27,13 @@ export default function WriteCode() {
             <form onSubmit={handleSubmit}>
                 <div>
                     <input onChange={handleChange}  name="titleCode" placeholder="Ingresa un titulo"/>
+                </div>          
+                 <div>
+                    <input onChange={handleChange}  name="lenguaje" placeholder="Ingresa el lenguaje"/>
                 </div>
                 <div>
                     <textarea onChange={handleChange}  rows="10" name="noteCode" placeholder="Escribe aqui..."></textarea>
                 </div>
-                
                 <div>
                     <button className="boton-online reset" type="reset">Cancelar</button>
                     <button className="default" onClick={handleSubmit} >Enviar</button>
